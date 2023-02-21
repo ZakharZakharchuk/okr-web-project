@@ -1,0 +1,42 @@
+a {
+  color: gray;
+}
+
+a:visited {
+  color: #469597;
+}
+
+a:hover {
+  color: #68904D;
+}
+
+article {
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+body {
+  font-size: larger;
+  background-color: floralwhite;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  font-style: italic;
+}
+
+img {
+  display: inline-block;
+  margin-right: 1rem;
+  float: left;
+  width: 150px;
+}
+
+
+
+
+
+
