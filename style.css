@@ -56,20 +56,33 @@ th, td {
 tbody tr {
   border-bottom: 1px solid black;
 }
+
 table {
   border-collapse: collapse;
   margin: 10px;
   font-size: 0.9em;
 }
-#theBlackSwan p{
-  color: black !important;
-}
-ol{
+
+ol {
   list-style-type: upper-roman;
 }
+
 ul {
   list-style-type: circle;
 }
+
+#theBlackSwan p {
+  color: black !important;
+}
+
+#antifragile > p {
+  color: #009879;
+}
+#firstParagraph + p{
+  color: #009879;
+}
+
+
 
 
 
