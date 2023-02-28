@@ -29,10 +29,46 @@ dd {
 }
 
 img {
-  display: inline-block;
   margin-right: 1rem;
   float: left;
   width: 150px;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.header {
+  line-height: 150%;
+}
+
+th {
+  background-color: #009879;
+  color: white;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+  margin: 10px;
+  font-size: 0.9em;
+}
+#theBlackSwan p{
+  color: black !important;
+}
+ol{
+  list-style-type: upper-roman;
+}
+ul {
+  list-style-type: circle;
 }
 
 

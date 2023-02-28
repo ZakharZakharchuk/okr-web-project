@@ -5,6 +5,19 @@
   <meta name="author" content="Zakhar Zakharchuk">
   <link rel="stylesheet" href="style.css">
   <title>Info</title>
+  <style>
+    a {
+      color: orange;
+    }
+
+    a:visited {
+      color: coral;
+    }
+
+    a:hover {
+      color: aqua;
+    }
+  </style>
 </head>
 <body>
 <main>
@@ -15,7 +28,7 @@
   <table>
     <caption>Book table</caption>
     <thead>
-    <tr bgcolor="#a9a9a9">
+    <tr>
       <th>Book</th>
       <th>Photo</th>
       <th>Buy</th>
@@ -42,7 +55,7 @@
     </tr>
     </tbody>
   </table>
-  <table cellpadding="12px" cellspacing="12px">
+  <table id="purchases">
     <caption>Shop list for February</caption>
     <colgroup>
       <col>
