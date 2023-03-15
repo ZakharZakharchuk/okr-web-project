@@ -4,17 +4,34 @@
   <meta charset="UTF-8">
   <meta name="author" content="Zakhar Zakharchuk">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <title>Books</title>
 </head>
 <body>
+<h1>Books</h1>
+<p>Mok text</p>
+<div id="container">
+</div>
+<script>
+  document.write("<h2>Document Write</h2>");
+  // Create element:
+  const para = document.createElement("p");
+  para.innerText = "This is a created paragraph(createElement)";
+  // Append to body:
+  document.body.appendChild(para);
+  const textNode = document.createTextNode("Create Text Node");
+  document.body.appendChild(textNode);
+</script>
 <div class="header">
-  <h1>Books</h1>
   <nav>
     <ol>
-      <li><a href="#theBlackSwan">The Black Swan</a></li>
+      <li><a class="odd" href="#theBlackSwan">The Black Swan</a></li>
       <li><a href="#antifragile">Antifragile</a></li>
-      <li><a href="#skinInTheGame">Skin in the Game</a></li>
+      <li><a id="textContent" class="odd" href="#skinInTheGame">Skin in the Game</a></li>
       <li><a href="info.html">Info</a></li>
+      <li><a class="odd" onclick="callCompareStrings()">Equalize</a></li>
+      <li><a onclick="userDialog()">Dialog</a></li>
+      <li><a class="odd" onclick="callDeveloperInfo()">About</a></li>
     </ol>
   </nav>
 </div>
@@ -24,7 +41,8 @@
       <article id="theBlackSwan">
         <h2><a href="theBlackSwan.html">The Black Swan</a></h2>
         <img src="image/swan.jpg" alt="The Black Swan">
-        <p>The <span class="blackSwan">Black Swan</span> is a standalone book in Nassim Nicholas Taleb’s landmark Incerto series,
+        <p id="change">The <span class="blackSwan">Black Swan</span> is a standalone book in Nassim
+          Nicholas Taleb’s landmark Incerto series,
           an
           investigation of opacity, luck, uncertainty, probability, human error, risk, and
           decision-making
@@ -74,7 +92,8 @@
       <article id="skinInTheGame">
         <h2><a href="skinInTheGame.html">Skin in the Game</a></h2>
         <img src="image/skin-in-the-game.jpg" alt="Skin in the game">
-        <p id="firstParagraph">In his most provocative and practical book yet,one of the foremost thinkers of
+        <p id="firstParagraph">In his most provocative and practical book yet,one of the foremost
+          thinkers of
           our
           time
           redefines what it means to understand the world, succeed in a profession,
