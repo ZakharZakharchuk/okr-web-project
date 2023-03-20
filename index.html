@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Zakhar Zakharchuk">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <title>Books</title>
 </head>
 <body>
@@ -15,6 +16,9 @@
       <li><a href="#antifragile">Antifragile</a></li>
       <li><a href="#skinInTheGame">Skin in the Game</a></li>
       <li><a href="info.html">Info</a></li>
+      <li><a onclick="showLocation()" href="#">Location</a></li>
+      <li><a id="contacts" href="#">Contacts</a></li>
+      <li><a id="elem" href="#">Elem</a></li>
     </ol>
   </nav>
 </div>
@@ -24,7 +28,8 @@
       <article id="theBlackSwan">
         <h2><a href="theBlackSwan.html">The Black Swan</a></h2>
         <img src="image/swan.jpg" alt="The Black Swan">
-        <p>The <span class="blackSwan">Black Swan</span> is a standalone book in Nassim Nicholas Taleb’s landmark Incerto series,
+        <p>The <span class="blackSwan">Black Swan</span> is a standalone book in Nassim Nicholas
+          Taleb’s landmark Incerto series,
           an
           investigation of opacity, luck, uncertainty, probability, human error, risk, and
           decision-making
@@ -74,7 +79,8 @@
       <article id="skinInTheGame">
         <h2><a href="skinInTheGame.html">Skin in the Game</a></h2>
         <img src="image/skin-in-the-game.jpg" alt="Skin in the game">
-        <p id="firstParagraph">In his most provocative and practical book yet,one of the foremost thinkers of
+        <p id="firstParagraph">In his most provocative and practical book yet,one of the foremost
+          thinkers of
           our
           time
           redefines what it means to understand the world, succeed in a profession,
@@ -113,5 +119,31 @@
     </li>
   </ul>
 </main>
+<button id="button">Event Handler</button>
+<button id="divBut">Hello</button>
+<button onclick="removeHandler()">Remove</button>
+<p id="demo"></p>
+<ul id="my-list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
+<div id="menu">
+  <button data-action="save">Save</button>
+  <button data-action="load">Load</button>
+  <button data-action="search">Search</button>
+</div>
+<button data-toggle-id="subscribe-mail"> Показать форму подписки</button>
+<form id="subscribe-mail" hidden>
+  Ваша почта:<input type="email">
+</form>
+<script> document.addEventListener('click', function (event) {
+  let id = event.target.dataset.toggleId;
+  if (!id) {
+    return;
+  }
+  let elem = document.getElementById(id);
+  elem.hidden = !elem.hidden;
+}); </script>
 </body>
 </html>
