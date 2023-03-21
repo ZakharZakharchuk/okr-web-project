@@ -1,27 +1,35 @@
+//Виклик функції
 function showLocation() {
   alert("Peremohy 37, Kyiv");
 }
-
+//Через властивість
 contacts.onclick = function () {
-  alert("098098098098");
+  alert("+380983456477");
 };
 
+//Різні обробники
 function handler1() {
-  alert('Спасибо!');
-};
+  alert('Atlas Shrugged');
+}
 
 function handler2() {
-  alert('Спасибо ещё раз!');
+  alert('Sister Carrie');
 }
 
 elem.addEventListener("click", handler1); // Спасибо!
 elem.addEventListener("click", handler2); // Спасибо ещё раз!
 
+//Вивести на чому спрацював обробник
 button.addEventListener('click', {
   handleEvent(event) {
     alert(event.type + " на " + event.currentTarget);
   }
 });
+
+//Видалення об'єкту
+function myFunction() {
+  alert("You are the best reader!!!")
+}
 
 divBut.addEventListener("click", myFunction);
 
@@ -29,33 +37,26 @@ function removeHandler() {
   divBut.removeEventListener("click", myFunction);
 }
 
-function myFunction() {
-  alert("Hello")
-}
-
-/*const list = document.getElementById("my-list");
-list.onclick = function (event) {
-  event.target.style.backgroundColor = 'yellow';
-};*/
-
+//Підсвідка елементу списка
 const list = document.getElementById("my-list");
 let selectedTd;
 list.onclick = function (event) {
-  let target = event.target; // где был клик?
+  let target = event.target; // Де був клік
   if (target.tagName !== 'LI') {
     return;
-  } // не на TD? тогда не интересует
-  highlight(target); // подсветить TD
+  }
+  highlight(target); // Підсвітити
 };
 
 function highlight(td) {
-  if (selectedTd) { // убрать существующую подсветку, если есть
+  if (selectedTd) { //Забрати підсвітку
     selectedTd.classList.remove('highlight');
   }
   selectedTd = td;
-  selectedTd.classList.add('highlight'); // подсветить новый td
+  selectedTd.classList.add('highlight'); // Підсвітити новий елемент
 }
 
+//data-action
 class Menu {
   constructor(elem) {
     this._elem = elem;
@@ -63,15 +64,15 @@ class Menu {
   }
 
   save() {
-    alert('сохраняю');
+    alert('You bought a new book');
   }
 
   load() {
-    alert('загружаю');
+    alert('You added book to the bucket');
   }
 
   search() {
-    alert('ищу');
+    alert('We are searching the best one');
   }
 
   onClick(event) {
@@ -83,3 +84,13 @@ class Menu {
 }
 
 new Menu(menu);
+
+//behaviour
+document.addEventListener('click', function (event) {
+  let id = event.target.dataset.toggleId;
+  if (!id) {
+    return;
+  }
+  let elem = document.getElementById(id);
+  elem.hidden = !elem.hidden;
+});

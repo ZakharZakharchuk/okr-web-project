@@ -18,11 +18,20 @@
       <li><a href="info.html">Info</a></li>
       <li><a onclick="showLocation()" href="#">Location</a></li>
       <li><a id="contacts" href="#">Contacts</a></li>
-      <li><a id="elem" href="#">Elem</a></li>
+      <li><a id="elem" href="#">What to read</a></li>
     </ol>
   </nav>
 </div>
 <main>
+  <button data-toggle-id="subscribe-mail">Want a promo code?</button>
+  <form id="subscribe-mail" hidden>
+    Email:<input type="email">
+  </form>
+  <div id="menu">
+    <button data-action="save">Buy</button>
+    <button data-action="load">Add to bucket</button>
+    <button data-action="search">Find similar</button>
+  </div>
   <ul>
     <li>
       <article id="theBlackSwan">
@@ -118,32 +127,15 @@
       </article>
     </li>
   </ul>
+  <p>What is your favourite book?</p>
+  <ol id="my-list">
+    <li>The Black Swan</li>
+    <li>Antifragile</li>
+    <li>Skin in the game</li>
+  </ol>
+  <button id="button">What is it?</button>
+  <button id="divBut">You are the best reader</button>
+  <button onclick="removeHandler()">Stop being the best reader</button>
 </main>
-<button id="button">Event Handler</button>
-<button id="divBut">Hello</button>
-<button onclick="removeHandler()">Remove</button>
-<p id="demo"></p>
-<ul id="my-list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ul>
-<div id="menu">
-  <button data-action="save">Save</button>
-  <button data-action="load">Load</button>
-  <button data-action="search">Search</button>
-</div>
-<button data-toggle-id="subscribe-mail"> Показать форму подписки</button>
-<form id="subscribe-mail" hidden>
-  Ваша почта:<input type="email">
-</form>
-<script> document.addEventListener('click', function (event) {
-  let id = event.target.dataset.toggleId;
-  if (!id) {
-    return;
-  }
-  let elem = document.getElementById(id);
-  elem.hidden = !elem.hidden;
-}); </script>
 </body>
 </html>
